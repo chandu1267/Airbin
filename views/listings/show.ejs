@@ -1,0 +1,23 @@
+<% layout("/layouts/boiler")%>
+<body>
+    <div class="card col-8 mt-3 offset-2">
+        <img src="<%= ShowData.image.url%>" class="card-img-top show-img" alt="listings-image">
+        <div class="card-body">
+            <p class="card-text">
+                <b><%= ShowData.title%></b> <br>
+                <b><%= ShowData.description%> </b><br>
+                <b>&#8377;<%= ShowData.price%> </b><br>
+                <b><%= ShowData.location%> </b><br>
+                <b><%= ShowData.country%> </b><br>
+            </p>
+        </div>
+    </div>
+    <div class="form-btns">
+        <form action="/listings/<%=ShowData._id %>/edit" method="get" class="offset-2">
+            <button class="btn add-btn">Edit this</button>
+        </form><br>
+        <form action="/listings/<%= ShowData._id%>?_method=DELETE" method="post" class="offset-1">
+            <button class="btn add-btn">Delete</button>
+        </form>
+    </div>
+</body>

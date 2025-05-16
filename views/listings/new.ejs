@@ -1,0 +1,33 @@
+<% layout("/layouts/boiler")%>
+<body>
+    <form action="/listings" method="post">
+        <h2>Create a new list</h2>
+        <br><br>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" id="" placeholder="Enter Title " class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea type="text" name="listing[description]" id="" placeholder="Enter Description" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL</label>
+            <input type="text" name="listing[image]" id="" placeholder="Enter imag URL" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="listing[price]" id="" placeholder="2,000" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" id="" placeholder="Delhi" class="form-control"required>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listing[country]" id="" placeholder="India" class="form-control"required>
+        </div>
+        <button class="btn btn-dark add-btn">ADD</button>
+        <br><br>
+    </form>
+</body>

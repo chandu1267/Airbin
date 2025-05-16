@@ -1,0 +1,32 @@
+<% layout("/layouts/boiler")%>
+<body>
+    <form action="/listings/<%= ShowData._id %>?_method=PUT"method="POST">
+        <br><br>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" id="" value="<%= ShowData.title %>" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Description</label>
+            <textarea type="text" name="listing[description]" class="form-control" id="" value =""><%= ShowData.description %></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Image URL</label>
+            <input type="text" name="listing[image]" id="" value="<%= ShowData.image %>" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Price</label>
+            <input type="number" name="listing[price]" id="" value="<%= ShowData.price %>" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Location</label>
+            <input type="text" name="listing[location]" id="" value="<%= ShowData.location %>" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Country</label>
+            <input type="text" name="listing[country]" id="" value="<%= ShowData.country %>" class="form-control">
+        </div>
+        <button class="btn btn-dark add-btn">Edit</button>
+        <br><br>
+    </form>
+</body>
